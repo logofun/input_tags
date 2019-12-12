@@ -19,27 +19,27 @@
 <input id="input_tags" type="text" class="input_tags" name="tags" value="测试,标签,value" placeholder="" />
 </div>
 </form>
+	
+<!-- tags.js为自执行js文件 -->
+<!-- <script src="./tags.js"></script> -->
 
-
+<script src="t.js"></script> 
 <script>
-		//初始化并调用$.FreeTags()  传入参数为 id
-		/**
-			HTML：
+	//初始化并调用InputTag()  传入参数为 两个input元素的id
+	/**
+		HTML：
 
-			<div class="input_box" id="tags">
-				<input type="text" class="input_tags" name="tags" value="测试,标签,Tags,Input,value" placeholder="请输入文字" />
-			</div>
+		<div class="input_box">
+			<input id="input_content" type="text" placeholder="请输入标签(按enter添加)" class="input_content" autocomplete="off">
+			<input id="input_tags" type="text" class="input_tags" name="tags" value="测试,标签,value" placeholder="" />
+		</div>
 
-			JS:
-			$.FreeTags('tags');
-		*/
-		/*
-		$(document).ready(function(e){
-			$.FreeTags('tags');
-		});
-		*/
+		JS:
+		InputTag("input_content","input_tags");
+	*/
 
+	InputTag("input_content","input_tags");
 </script>
 </body>
 </html>
-<script src="./tags.js"></script>
+

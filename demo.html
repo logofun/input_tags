@@ -5,32 +5,27 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>input自定义标签</title>
-<link rel="stylesheet" href="./input_tags.css">
-<script src="./jquery.min.js"></script>
-<script src="./input_tags.js"></script>
+<link rel="stylesheet" href="./tags.css">
+
+
 </head>
 <body>
 <form action="" class="formcl">
 <h3>输入内容后，按回车键增加标签</h3>
-<div class="input_box" id="tags">
-<input type="text" class="input_tags" name="tags" value="测试,标签,Tags,Input,value" placeholder="请输入文字" />
+<div class="input_box">
+<!-- 输入标签 -->
+<input id="input_content" type="text" placeholder="请输入标签(按enter添加)" class="input_content" autocomplete="off">
+<!-- 传递标签 -->
+<input id="input_tags" type="text" class="input_tags" name="tags" value="测试,标签,value" placeholder="" />
 </div>
 </form>
+	
+
+
+<script src="tag.js"></script> 
 <script>
-		//初始化并调用$.FreeTags()  传入参数为 id
-		/**
-			HTML：
-
-			<div class="input_box" id="tags">
-				<input type="text" class="input_tags" name="tags" value="测试,标签,Tags,Input,value" placeholder="请输入文字" />
-			</div>
-
-			JS:
-			$.FreeTags('tags');
-		*/
-		$(document).ready(function(e){
-			$.FreeTags('tags');
-		});
-	</script>
+	InputTag("input_content","input_tags");
+</script>
 </body>
 </html>
+

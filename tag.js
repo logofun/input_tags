@@ -29,10 +29,14 @@
 	
 	function showTag(arr){ //在指定元素前显示标签 arr为数组
         let html = '';
-        for( let i=0; i<arr.length; ++i ){
-            html +='<span>' + arr[i] + '<button class=\'close\'></button></span>';
+        if (arr.length==1 && arr[0]=='') { //判断arr为空数组
+            let html = '';
+        }else {
+            for( let i=0; i<arr.length; ++i ){
+                html +='<span>' + arr[i] + '<button class=\'close\'></button></span>';
+            }
         }
-        //console.log(html);
+        // console.log(html);
         elInputContent.insertAdjacentHTML('beforebegin',html);
     }
  

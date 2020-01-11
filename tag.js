@@ -7,7 +7,9 @@
 	function init(d,e){
 		elInputContent = document.getElementById(d);
 		elInputTags = document.getElementById(e);
-		tags = elInputTags.value.split(',');
+        if (elInputTags.value !== "") { //需加入tags为空的判断
+            tags = elInputTags.value.split(',');
+        }
 		showTag(tags);
 		btnInit();
 		keyInit();
